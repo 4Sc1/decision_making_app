@@ -2,6 +2,7 @@
 
 - Run installer EXE. The experiment app will be installed at %LOCALAPPDATA%/Programs/4Sc1/ExperimentApp
 - Adjust configuration settings as needed.
+- Grant network access to EXE upon first run to allow LabStreamingLayer streaming.
 
 # Source Code Setup (only for software development)
 
