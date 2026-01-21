@@ -1,8 +1,12 @@
-# Setup
+# ExperimentApp Setup
 
-- Make sure to adjust the path to your conda environment in the environment.yml file.
-- Also, place unpleasant pictures (.jpg) and sound (tv.wav) into subfolder iaps.
+- Run installer EXE. The experiment app will be installed at %LOCALAPPDATA%/Programs/4Sc1/ExperimentApp
+- Adjust configuration settings as needed.
 
+# Source Code Setup (only for software development)
+
+- Make sure to adjust the path to your conda environment in the environment.yml file in the base source code folder.
+- Place unpleasant pictures (.jpg) and sound (tv.wav) into subfolder iaps.
 
 # Configuration Settings
 
