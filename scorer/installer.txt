@@ -1,0 +1,1 @@
+pyinstaller --name Scorer --windowed --onefile --hidden-import pandas scorer.py

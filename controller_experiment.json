@@ -1,0 +1,109 @@
+{
+    "settings": {
+        "mode": "test",
+        "participant_id": 1
+    },
+    "transitions": {
+        "start": "demo",
+        "demo": "health_hab",
+        "health_hab": "recent_act",
+        "recent_act": "bisbas",
+        "bisbas": "nfc",
+        "nfc": "stroop_inst1",
+        "stroop_inst1": "stroop_inst2",
+        "stroop_inst2": "stroop_inst3",
+        "stroop_inst3": "stroop_task",
+        "stroop_task": "wis_inst1",
+        "wis_inst1": "wis_inst2",
+        "wis_inst2": "wis_inst3",
+        "wis_inst3": "wis_task",
+        "wis_task": "nback_p1_inst1",
+        "nback_p1_inst1": "nback_p1_inst2",
+        "nback_p1_inst2": "nback_p1_test1",
+        "nback_p1_test1": "nback_p1_inst3",
+        "nback_p1_inst3": "nback_p1_test2",
+        "nback_p1_test2": "nback_p1_tl1",
+        "nback_p1_tl1": "nback_p1_inst4",
+        "nback_p1_inst4": "nback_p1_test3",
+        "nback_p1_test3": "nback_p1_inst5",
+        "nback_p1_inst5": "nback_p1_test4",
+        "nback_p1_test4": "nback_p1_tl2",
+        "nback_p1_tl2": "nback_p1_inst6",
+        "nback_p1_inst6": "nback_p1_test5",
+        "nback_p1_test5": "nback_p1_inst7",
+        "nback_p1_inst7": "nback_p1_test6",
+        "nback_p1_test6": "nback_p1_tl3",
+        "nback_p1_tl3": "nback_p2_inst1",
+        "nback_p2_inst1": "nback_p2_trial_ex1",
+        "nback_p2_trial_ex1": "nback_p2_trial_ex2",
+        "nback_p2_trial_ex2": "nback_p2_trial_ex3",
+        "nback_p2_trial_ex3": "nback_p2_inst2",
+        "nback_p2_inst2": "nback_p2_trial_info",
+        "nback_p2_trial_info": {
+            "type": "conditional_task",
+            "condition": "nback_trial_accepted",
+            "conditions": [
+                {
+                    "value": false,
+                    "next": "nback_p2_trial_info"
+                },
+                {
+                    "value": true,
+                    "next": "nback_p2_trial"
+                }
+            ],
+            "trials": 54,
+            "next": "nback_p2_end"
+        },
+        "nback_p2_trial": "nback_p2_trial_info",
+        "nback_p2_end": {
+            "type": "condition",
+            "condition": "any_nback_trial_accepted",
+            "conditions": [
+                {
+                    "value": false,
+                    "next": "eaa_p1_inst1"
+                },
+                {
+                    "value": true,
+                    "next": "nback_p3_inst"
+                }
+            ]
+        },
+        "nback_p3_inst": "nback_p3_trial1",
+        "nback_p3_trial1": "nback_p3_other_trial1",
+        "nback_p3_other_trial1": "nback_p3_trial2",
+        "nback_p3_trial2": "nback_p3_other_trial2",
+        "nback_p3_other_trial2": "nback_p3_trial3",
+        "nback_p3_trial3": "eaa_p1_inst1",
+        "eaa_p1_inst1": "eaa_p1_inst2",
+        "eaa_p1_inst2": "eaa_p1_inst3",
+        "eaa_p1_inst3": "eaa_p1_inst4",
+        "eaa_p1_inst4": "eaa_p1_prob1",
+        "eaa_p1_prob1": "eaa_p1_prob2",
+        "eaa_p1_prob2": "eaa_p1_prob3",
+        "eaa_p1_prob3": "eaa_p1_qnr1",
+        "eaa_p1_qnr1": "eaa_p1_unpleasant",
+        "eaa_p1_unpleasant": "eaa_p1_qnr2",
+        "eaa_p1_qnr2": "eaa_p2_inst",
+        "eaa_p2_inst": "eaa_p2_trial_info",
+        "eaa_p2_trial_info": {
+            "type": "conditional_task",
+            "condition": "eaa_trial_accepted",
+            "conditions": [
+                {
+                    "value": false,
+                    "next": "eaa_p2_trial_info"
+                },
+                {
+                    "value": true,
+                    "next": "eaa_p2_trial"
+                }
+            ],
+            "trials": 54,
+            "next": "outtro"
+        },
+        "eaa_p2_trial": "eaa_p2_trial_info",
+        "outtro": "end"
+    }
+}

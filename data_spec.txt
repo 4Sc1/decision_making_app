@@ -1,0 +1,5 @@
+    binaries=[('lib/lsl.dll', 'pylsl/lib/')],
+	datas=[('assets/', 'assets/'), ('iaps/', 'iaps/'), ('README.md', './'), ('settings.json', './')],
+    pyinstaller --onefile --windowed --add-data "assets;assets" --add-data "iaps;iaps" --add-data "README.md;./" --add-data "settings.json;./" --add-binary "lib/lsl.dll;pylsl/lib" --hidden-import PyQt5.sip main.py
+	
+	 pyinstaller --onefile --add-binary "lib/lsl.dll;pylsl/lib" tobiilsl.py
