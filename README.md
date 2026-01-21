@@ -1,7 +1,7 @@
 # Setup
 
-Make sure to adjust the path to your conda environment in the environment.yml file.
-Also, place unpleasant pictures (.jpg) and sound (tv.wav) into subfolder iaps.
+- Make sure to adjust the path to your conda environment in the environment.yml file.
+- Also, place unpleasant pictures (.jpg) and sound (tv.wav) into subfolder iaps.
 
 
 # Configuration Settings
