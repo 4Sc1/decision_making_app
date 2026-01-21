@@ -1,3 +1,9 @@
+# Setup
+
+Make sure to adjust the path to your conda environment in the environment.yml file.
+Also, place unpleasant pictures (.jpg) and sound (tv.wav) into subfolder iaps.
+
+
 # Configuration Settings
 
 Configuration settings for the application are stored in the `settings.json` file, located in the installation folder at `%LOCALAPPDATA%\Programs\4Sc1\ExperimentApp`. This file controls the flow and operational mode of your application, helping to tailor the user experience for testing or regular use.
@@ -21,8 +27,3 @@ Configuration settings for the application are stored in the `settings.json` fil
 ## Experiment Results Storage
 
 - **Location**: The results of the experiments will be stored in participant-specific subfolders located within the `%LOCALAPPDATA%\ExperimentResults` folder. This organization helps in maintaining a structured and easily accessible format for individual participant data.
-
-**Important**
-
-Make sure to adjust the path to your conda environment in the environment.yml file.
-Also, place unpleasant pictures (.jpg) and sound (tv.wav) into subfolder iaps.
